@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cambridge Accreditation System — Public Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Cambridge Accreditation System Home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span class="brand-text">Cambridge Accreditation</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#training-centers" class="nav-link">Training Centers</a></li>
+          <li><a href="#trainers" class="nav-link">Trainers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="hero-section" aria-labelledby="home-heading">
+      <div class="container hero-content">
+        <span class="eyebrow">Official Public Registry</span>
+        <h1 id="home-heading" class="hero-title">Welcome to the Cambridge Accreditation System</h1>
+        <p class="hero-intro">
+          The Cambridge Accreditation System verifies and publishes quality-assured educational and
+          professional training standards across recognized institutions.
+        </p>
+        <p class="hero-purpose">
+          This public portal allows prospective learners, institutions, and partners to browse
+          currently accredited training centers and certified trainers transparently in one place.
+        </p>
+        <div class="hero-actions">
+          <a href="#training-centers" class="btn btn-primary">View Training Centers</a>
+          <a href="#trainers" class="btn btn-secondary">View Trainers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Centers Section -->
+    <section id="training-centers" class="directory-section" aria-labelledby="centers-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 id="centers-heading" class="section-title">Accredited Training Centers</h2>
+            <p class="section-subtitle">
+              Active training centers currently holding verified Cambridge accreditation.
+            </p>
+          </div>
+          <div class="search-box">
+            <label for="center-search" class="sr-only">Search training centers by name</label>
+            <input
+              type="search"
+              id="center-search"
+              class="search-input"
+              placeholder="Search centers by name..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div id="centers-container" class="cards-grid" role="region" aria-live="polite"></div>
+        <p id="centers-empty-message" class="empty-state" hidden></p>
+      </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="directory-section section-alt" aria-labelledby="trainers-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 id="trainers-heading" class="section-title">Accredited Trainers</h2>
+            <p class="section-subtitle">
+              Active certified trainers affiliated with currently accredited training centers.
+            </p>
+          </div>
+          <div class="search-box">
+            <label for="trainer-search" class="sr-only">Search trainers by name</label>
+            <input
+              type="search"
+              id="trainer-search"
+              class="search-input"
+              placeholder="Search trainers by name..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div id="trainers-container" class="cards-grid" role="region" aria-live="polite"></div>
+        <p id="trainers-empty-message" class="empty-state" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-copy">
+        <strong>Cambridge Accreditation System</strong> &copy; <span id="current-year"></span>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
